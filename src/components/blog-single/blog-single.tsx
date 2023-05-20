@@ -7,7 +7,6 @@ import { useState, useEffect, useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
-import { Location } from 'react-router';
 import DOMPurify from 'dompurify';
 import { Footer } from '../footer/footer';
 import { Navbar } from '../navbar/navbar';

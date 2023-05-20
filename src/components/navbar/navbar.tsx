@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import styles from './navbar.module.scss';
 import classNames from 'classnames';
 import { useState, useContext, useEffect } from 'react';
-import { ProfileLogout } from '../profile-logout/profile-logout';
 import { AuthContext } from '../../context/authContext';
 import axios from 'axios';
 import moment from 'moment';

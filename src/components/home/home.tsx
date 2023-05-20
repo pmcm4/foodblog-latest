@@ -1,22 +1,13 @@
 import styles from './home.module.scss';
 import classNames from 'classnames';
 import { Navbar } from '../navbar/navbar';
-import { useContext } from 'react';
 import { Footer } from '../footer/footer';
-import { BlogSingle } from '../blog-single/blog-single';
-import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
-import InsertLinkIcon from '@mui/icons-material/InsertLink';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import DOMPurify from 'dompurify';
-import { AuthContext } from '../../context/authContext';
 import moment from "moment";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 
 export interface HomeProps {

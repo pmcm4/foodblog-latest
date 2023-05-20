@@ -1,11 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useContext} from 'react';
 import styles from './App.module.scss';
-import { ProfileLogout } from './components/profile-logout/profile-logout';
 import { Login } from './components/login/login';
-import { Footer } from './components/footer/footer';
 import { Home } from './components/home/home';
-import { CategorySolo } from './components/category-solo/category-solo';
 import { AdminProfile } from './components/admin-profile/admin-profile';
 import { UserProfile } from './components/user-profile/user-profile';
 import { About } from './components/about/about';
@@ -13,8 +9,6 @@ import { Search } from './components/search/search';
 import { Register } from './components/register/register';
 import { Create } from './components/create/create';
 import { BlogSingle } from './components/blog-single/blog-single';
-import { AuthContext } from './context/authContext';
-import { NotFound } from './components/not-found/not-found';
 
 
 
@@ -34,9 +28,6 @@ function App() {
          </Routes>
          <Routes>
            <Route path='/register' Component={Register}/>
-         </Routes>
-         <Routes>
-           <Route path='/solo' Component={CategorySolo}/>
          </Routes>
          <Routes>
            <Route path='/about' Component={About}/>
