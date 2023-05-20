@@ -27,8 +27,12 @@ export const BlogSingle = ({ className }: BlogSingleProps) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
-
-	const currentUserID = currentUser.id;
+	useEffect(() => {
+		if (!currentUser) {
+			navigate('/login');
+		}
+	}, [currentUser, navigate]);
+	
 	const [comment, setComment] = useState('');
 
 	const postId = location.pathname.split('/')[2];
@@ -101,8 +105,6 @@ export const BlogSingle = ({ className }: BlogSingleProps) => {
 	});
 
 	const currentUserOwnsPost = currentUser?.id === post?.uid;
-	const userID = currentUser.id;
-	console.log(currentUserOwnsPost)
 
 	const handleDelete = async () => {
 		try {
@@ -163,14 +165,10 @@ export const BlogSingle = ({ className }: BlogSingleProps) => {
 			console.error('Failed to copy URL to clipboard:', error);
 		}
 	};
+	
+	
 
-	useEffect(() => {
-		if (!currentUser) {
-			navigate('/login');
-		}
-	}, [currentUser, navigate]);
-
-
+	const currentUserID = currentUser?.id;
 	const [comments, setComments] = useState<{
 		commentData: string;
 		date: string;
@@ -236,16 +234,16 @@ export const BlogSingle = ({ className }: BlogSingleProps) => {
 					<div className={styles.profile}>
 						<img className={styles.pic} src={`../upload/${post?.userImg}`} />
 						<Link style={{ textDecoration: 'none', color: "black" }} to={`/adminprofile/${post.uid}`} className={styles.name}>
-							<span className={styles.name}>{post.username}</span>
+							<span className={styles.name}>{post?.username}</span>
 						</Link>
 					</div>
 
 					<div className={styles.content}>
-						<h1 className={styles.title}>{post.title}</h1>
+						<h1 className={styles.title}>{post?.title}</h1>
 
 						<p className={styles.contentText}
 							dangerouslySetInnerHTML={{
-								__html: DOMPurify.sanitize(post.desc),
+								__html: DOMPurify.sanitize(post?.desc),
 							}}
 						>
 
@@ -313,7 +311,7 @@ export const BlogSingle = ({ className }: BlogSingleProps) => {
 								</div>
 								{comment.uid === currentUser?.id && (
 									<DeleteOutlineOutlinedIcon
-										onClick={() => commentDelete(comment.id)}
+										onClick={() => commentDelete(comment?.id)}
 										sx={{ cursor: 'pointer' }}
 									/>
 								)}

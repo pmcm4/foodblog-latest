@@ -112,7 +112,7 @@ export const Create = ({ className }: CreateProps) => {
                     <div className={styles.top}>
                         <div className={styles.prof}>
                             <img
-                                src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
+                                src={`../upload/${currentUser?.img}`}
                                 className={styles.img}
                             />
                             <span className={styles.username}>@{currentUser?.username}</span>
