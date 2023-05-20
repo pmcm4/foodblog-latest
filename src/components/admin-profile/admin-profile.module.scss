@@ -1,0 +1,290 @@
+.root {
+  background-color: #f9f6ee;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  column-gap: 50px;
+}
+.left1 {
+  width: 250px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+// edit profile
+.editProfileOverlay {
+  background-color: rgb(128, 128, 128, .5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw; 
+}
+.editProfile {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  width: 600px;
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: auto;
+  background-color: white;  
+  border-radius: 20px;
+  box-shadow: 0px 3px 15px 0px rgb(0, 0, 0, .2);
+}
+.editProfileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+.editProfileHeaderText {
+  margin-left: 30px;
+}
+.editProfileHeaderCloseBtn {
+  cursor: pointer;
+}
+.editProfileDividerThick {
+  border-top: 1px solid black;
+  margin: 5px 0;
+}
+.editProfileDividerThin{
+  border-top: .5px solid rgb(0, 0, 0, .2);
+  margin: 20px 0;
+}
+.editProfileForm{
+  align-items: left;
+  margin: 0 40px;
+  padding: 0;
+  align-items: center;
+}
+.editProfileFormPhotoContainer{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+}
+.editProfileFormPhotoLabel{
+  position: absolute;
+  left: 0;
+}
+.editProfileFormUserName {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.editProfileFormUserNameLabel{
+  margin: 0;
+  vertical-align: baseline;
+  position: absolute;
+  left: 0;
+}
+.editProfileFormUserNameInput{
+  padding: 5px;
+  width: 240px;
+  border: 0;
+  background-color: rgb(223, 223, 223);
+  border-radius: 5px;
+}
+.editProfileFormUserNameText {
+  width: 240px;
+  font-size: .75em;
+  margin: 0;
+  margin-top: 5px;
+}
+.editProfileFormName {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.editProfileFormNameLabel {
+  margin: 0;
+  vertical-align: baseline;
+  position: absolute;
+  left: 0;
+}
+.editProfileFormNameInput {
+  padding: 5px;
+  width: 240px;
+  border: 0;
+  background-color: rgb(223, 223, 223);
+  border-radius: 5px;
+}
+.editProfileFormBio {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.editProfileFormBioLabel {
+  margin: 0;
+  vertical-align: baseline;
+  position: absolute;
+  left: 0;
+}
+.editProfileBioTextArea {
+  padding: 5px;
+  width: 240px;
+  height: 100px;
+  border: 0;
+  background-color: rgb(223, 223, 223);
+  border-radius: 5px;
+  resize: none;
+}
+.editProfileFormBioText {
+  width: 240px;
+  font-size: .75em;
+  margin: 0;
+  margin-top: 5px;
+}
+.editProfileSaveBtn{
+  margin-left: auto;
+  margin-right: 60px;
+  margin-top: 20px;
+  width: 70px;
+  padding: 7px 10px;
+  border-radius: 50px;
+  background-color: #d22b2b;
+  color: white;
+  border: 0;
+
+  &:hover {
+    background-color: #097969;
+    cursor: pointer;
+  }
+}
+
+
+.right1 {
+  width: 835px;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  min-height: 700px;
+}
+.profPic {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+.name {
+  margin: 0;
+  text-align: left;
+}
+.userName {
+  text-align: left;
+  margin-top: -10px;
+}
+.info {
+  width: 187px;
+}
+.head {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.bod {
+  display: grid;
+  flex-direction: row;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+  overflow: auto;
+}
+.divider {
+  border: none;
+  height: 2px;
+  background-color: black;
+  width: 100%;
+}
+.geadgead {
+  display: flex;
+  justify-content: space-between;
+}
+.hello {
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  cursor: default;
+  background-color: gray;
+  opacity: 0.5;
+}
+.modal {
+}
+
+//minipost
+.minipost {
+  width: 265px;
+  height: 272px;
+  cursor: pointer;
+}
+.image {
+  cursor: pointer;
+  display: flex;
+  width: 265px;
+  height: 272px;
+}
+.editButtonShadow{
+  margin-right: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0px 2px 5px 0px rgb(0, 0, 0, .3);
+}
+.editButton {
+  position:relative;
+  cursor: pointer;
+  display: flex;
+  background-color: white;
+  margin-right: auto;
+  padding: 7px 10px;
+  border-radius: 8px;
+  align-items: center;
+  box-shadow: 0px 0px 0px .5px rgb(0, 0, 0, 1);
+}
+.editButtonText {
+  margin: 0;
+}
+.editButtonIcon {
+  margin-left: 5px;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left1 {
+    height: 400px;
+    align-items: center;
+  }
+  .editButtonShadow {
+    margin-right: 0;
+  }
+  .info {
+    text-align: center;
+  }
+}

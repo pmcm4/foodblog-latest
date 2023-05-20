@@ -1,0 +1,180 @@
+.root {
+  width: 100%;
+}
+.up {
+  height: 344px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+}
+.down {
+  height: 52px;
+  background-color: #b6b5b5;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 5px;
+}
+.left {
+  width: 400px;
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center {
+  width: 400px;
+  height: 344px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+}
+.right {
+  width: 400px;
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.foodDesc {
+  text-align: start;
+  padding-left: 30px;
+  margin-top: -20px;
+  margin-bottom: 8px;
+}
+.contact {
+  width: 231px;
+  height: 60px;
+}
+.contactinfo {
+  width: 231px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  position: relative;
+  right: 55px;
+  margin-bottom: 4px;
+}
+.contactIcons {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.contactinfotext {
+}
+
+.socialIcons {
+  width: 231px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  right: 55px;
+  justify-items: start;
+  margin-left: -10px;
+}
+.quicklinks {
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+.links {
+  text-align: start;
+  cursor: pointer;
+
+}
+.links:hover {
+  color: #c0a71c;
+}
+.ql {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contactusemail {
+  width: 292px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+}
+.textarea {
+  width: 292px;
+  height: 88px;
+  border: none;
+  border-radius: 10px;
+}
+.send {
+  width: 112px;
+  height: 37px;
+  background-color: #097969;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fdda0d;
+  }
+}
+.contactusheader {
+  text-align: start;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+.contactusemail {
+  margin-top: -5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.textarea {
+  padding: 5px;
+}
+.allrights {
+}
+.allrights1 {
+  color: #d22b2b;
+}
+.quickContactContainer {
+  display: flex;
+  margin: 0 30px;
+  margin-bottom: 60px;
+  justify-content: space-between;
+}
+
+@media (max-width: 1100px) {
+  .up {
+    flex-direction: column;
+    height: auto;
+  }
+  .left, .center, .right {
+    width: auto;
+    height: auto;
+  }
+  .left {
+    align-items: baseline;
+    border-bottom: 0.3px solid rgb(0, 0, 0, .2);
+    padding-bottom: 55px;
+  }
+  .contactinfo {
+    right: 0;
+    padding-left: 30px;
+  }
+  .socialIcons {
+    right: 0;
+    padding-left: 30px;
+  }
+}
